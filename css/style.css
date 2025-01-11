@@ -4,6 +4,10 @@
 
 :root {
     --fonte: "DM Sans", serif;
+    --cor1: hsl(171, 66%, 44%);
+    --cor2: hsl(233, 100%, 69%);
+    --cor3: hsl(210, 10%, 33%);
+    --cor4: hsl(201, 11%, 66%);
 }
 
 * {
@@ -36,17 +40,22 @@ img {
 h1 {
   font-size: 2.3rem;
   text-align: center;
+  font-weight: 600;
+  color: var(--cor3);
 }
 
 h2 {
   font-size: 2.3rem;
   text-align: center;
+  color: var(--cor3);
 }
 
 p {
   font-size: 1.2rem;
   text-align: center;
   padding: 1rem 0 2rem 0;
+  font-weight: 400;
+  color: var(--cor4);
 }
 
 .links-area {
@@ -63,15 +72,25 @@ p {
   margin: 0.7rem auto;
   text-align: center;
   color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 
 .link1 {
-  background-color: rgba(80, 163, 80, 0.658);
+  background-color: var(--cor1);
 }
 
 .link2 {
-  background-color: rgb(49, 49, 175);
+  background-color: var(--cor2);
 }
+
+.computer {
+  padding: 1.3rem 1.3rem 8rem 1.3rem;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 
 .container {
   margin: 0 auto;
@@ -90,6 +109,10 @@ ul {
 
 li img {
   width: 10%;
+}
+
+.company {
+  padding: 8rem 0 8rem 0;
 }
 
 .company li img {
@@ -145,9 +168,18 @@ footer li {
     margin: 0 1rem;
   }
 
+  .links-area a:first-of-type:hover {
+    color: var(--cor2);
+  }
+
+  .links-area a:hover {
+    color: var(--cor1);
+  }
+
   .computer {
     display: flex;
     flex-direction: row;
+    max-width: 100%;
   }
 
   .computer img {
@@ -202,10 +234,24 @@ footer li {
 
   footer ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 170px;
+    gap: 1rem;
+    text-align: left;
+  }
+
+  footer ul a {
+    text-decoration: none;
+    color: var(--cor3);
+  }
+
+  footer ul a:hover {
+    color: var(--cor1);
   }
 
   .logofooter {
     padding: 0 2rem;
   }
+
 }
